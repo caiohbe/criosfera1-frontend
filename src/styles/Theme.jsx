@@ -7,7 +7,7 @@ let criosferaTheme = createTheme({
       main: "#7D8DBE",
     },
     secondary: {
-      main: "#044192",
+      main: "#FFF ",
     },
   },
   typography: {
