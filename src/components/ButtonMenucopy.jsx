@@ -10,9 +10,7 @@ const useStyles = makeStyles({
   },
 })
 
-function ButtonMenu() {
-  const teste = {name: "Ciência", popover: [{name: "teste1", href: "teste1href"}, {name: "teste2", href: "teste2href"}, {name: "teste3", href: "teste3href"}]}
-  //const teste = {name: "Ciência", href: "ciencia"}
+function ButtonMenu({teste}) {
   let currentlyHovering = false
   const styles = useStyles()
   const navigate = useNavigate()
@@ -42,8 +40,8 @@ function ButtonMenu() {
     }, 50)
   }
 
-  if (teste.popover) {
-    const menuItems = teste.popover.map( (item, index) => {
+  if (teste.popOver) {
+    const menuItems = teste.popOver.map( (item, index) => {
       return (
           <MenuItem key={index} sx={{ color: "secondary.main" }} onClick={() => {handleClose, navigate(`/${item.href}`)}}>{item.name}</MenuItem>
       )
