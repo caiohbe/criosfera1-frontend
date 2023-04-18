@@ -74,7 +74,7 @@ function ButtonMenu({ topic }) {
           PaperProps={{
             elevation: 0,
             style: {
-              backgroundColor: "#7D8DBE",
+              backgroundColor: "#f2f" /*FIXME*/,
               borderRadius: 12,
               marginTop: 3,
             },

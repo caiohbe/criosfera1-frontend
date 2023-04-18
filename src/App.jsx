@@ -8,11 +8,10 @@ function App() {
   return (
     <ThemeProvider theme={criosferaTheme}>
       <BrowserRouter>
-        <Header>
-          <Routes>
-            <Route path='/home' element={<Home />} />
-          </Routes>
-        </Header>
+        <Header />
+        <Routes>
+          <Route path='/home' element={<Home />} />
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   )

@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material"
 let criosferaTheme = createTheme({
   palette: {
     primary: {
-      main: "#7D8DBE",
+      main: "#3598FE",
     },
     secondary: {
       main: "#FFF ",
