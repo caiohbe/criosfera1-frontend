@@ -119,8 +119,6 @@ function ButtonMenu({ topic }) {
     )
   }
 
-  console.log(topic)
-
   if (topic.popOver) {
     return handlePopOver(topic)
   } else {
