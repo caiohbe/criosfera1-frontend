@@ -1,5 +1,5 @@
 const headerItems = [
-  { name: "Home", href: "home" },
+  { name: "Home", href: "" },
   { name: "Quem somos", href: "about" },
   { name: "História", href: "history" },
   { name: "Infraestrutura", href: "infra" },

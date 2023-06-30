@@ -1,31 +1,61 @@
 import { Container, Typography, Box, Button } from "@mui/material"
-import TEMP from "../../assets/TEMP.jpg"
+import { useNavigate } from "react-router-dom"
+import criosferaGif from "../../assets/criosferaGif.gif"
 
 function Home() {
+  const navigate = useNavigate()
+
   return (
     <Container
-      sx={{ bgcolor: "tomato", display: "flex", width: "100vw", padding: 0 }}
+      disableGutters={true}
+      sx={{ bgcolor: "orange", display: "flex", width: "" }}
     >
       <Box sx={{ bgcolor: "aqua", height: "80vh", width: "50%" }}>
-        <Typography>TEXTO</Typography>
+        <Typography
+          variant='h2'
+          sx={{
+            letterSpacing: 0,
+            marginTop: 7,
+          }}
+        >
+          Criosfera 1
+        </Typography>
+        <Typography variant='h3' sx={{ marginTop: 1, marginBottom: 4 }}>
+          O primeiro módulo científico brasileiro instalado no interior <br />
+          da antártica
+        </Typography>
         <Button
           onClick={() => {
-            /*FIXME*/
+            navigate("/infra")
           }}
           variant='contained'
-          sx={{ color: "#fff", fontWeight: 700 }}
+          sx={{ color: "#fff", fontWeight: 700, width: 180, height: 55 }}
         >
           Saiba mais
         </Button>
-        <Button variant='text' sx={{ fontWeight: 700 }}>
-          Saiba mais
+        <Button
+          onClick={() => {
+            navigate("/about")
+          }}
+          variant='text'
+          sx={{
+            width: 180,
+            height: 55,
+            marginLeft: 1,
+          }}
+        >
+          Quem somos
         </Button>
       </Box>
       <Box
         component='img'
-        src={TEMP /*FIXME*/}
+        src={criosferaGif}
         alt='Criosfera 1 Container'
-        sx={{ bgcolor: "orange", width: "50%", height: "400px" }}
+        sx={{
+          height: "400px",
+          marginTop: 20,
+          paddingLeft: 0,
+        }}
       ></Box>
     </Container>
   )
