@@ -10,7 +10,7 @@ let criosferaTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Lato", "sans-serif"].join(","),
+    fontFamily: "Lato, sans-serif",
   },
 })
 

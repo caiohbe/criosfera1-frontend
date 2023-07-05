@@ -1,35 +1,30 @@
 import { Container, Typography, Box, Button } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 import criosferaGif from "../../assets/criosferaGif.gif"
+import { homeSx } from "./homeStyles"
 
 function Home() {
   const navigate = useNavigate()
 
   return (
-    <Container
-      disableGutters={true}
-      sx={{ bgcolor: "orange", display: "flex", width: "" }}
-    >
-      <Box sx={{ bgcolor: "aqua", height: "80vh", width: "50%" }}>
+    <Container disableGutters={true} sx={homeSx.Container.sx}>
+      <Box sx={homeSx.Container.boxLeft.sx}>
+        <Typography variant='h3' sx={{ marginTop: 1 }}>
+          CRIOSFERA 1
+        </Typography>
         <Typography
           variant='h2'
-          sx={{
-            letterSpacing: 0,
-            marginTop: 7,
-          }}
+          sx={{ marginTop: 1, marginBottom: 4, fontSize: 45 }}
         >
-          Criosfera 1
-        </Typography>
-        <Typography variant='h3' sx={{ marginTop: 1, marginBottom: 4 }}>
-          O primeiro módulo científico brasileiro instalado no interior <br />
-          da antártica
+          o primeiro módulo científico brasileiro instalado no interior <br />
+          da Antártida
         </Typography>
         <Button
           onClick={() => {
             navigate("/infra")
           }}
           variant='contained'
-          sx={{ color: "#fff", fontWeight: 700, width: 180, height: 55 }}
+          sx={homeSx.Container.buttonLeft.sx}
         >
           Saiba mais
         </Button>
@@ -38,25 +33,19 @@ function Home() {
             navigate("/about")
           }}
           variant='text'
-          sx={{
-            width: 180,
-            height: 55,
-            marginLeft: 1,
-          }}
+          sx={homeSx.Container.buttonRight.sx}
         >
           Quem somos
         </Button>
       </Box>
-      <Box
-        component='img'
-        src={criosferaGif}
-        alt='Criosfera 1 Container'
-        sx={{
-          height: "400px",
-          marginTop: 20,
-          paddingLeft: 0,
-        }}
-      ></Box>
+      <Box>
+        <Box
+          component='img'
+          src={criosferaGif}
+          alt='Criosfera 1 Container'
+          sx={homeSx.Container.criosferaGif.sx}
+        ></Box>
+      </Box>
     </Container>
   )
 }

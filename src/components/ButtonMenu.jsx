@@ -59,7 +59,10 @@ function ButtonMenu({ topic }) {
       <div>
         <StyledButton
           sx={{
-            ":hover": { bgcolor: "primary.main", color: "secondary.main" },
+            ":hover": {
+              bgcolor: "primary.main",
+              color: "secondary.main",
+            },
           }}
           aria-owns={anchorEl ? "simple-menu" : undefined}
           aria-haspopup='true'
@@ -73,8 +76,10 @@ function ButtonMenu({ topic }) {
           disableAutoFocusItem
           PaperProps={{
             elevation: 0,
+            sx: {
+              backgroundColor: "primary.main",
+            },
             style: {
-              backgroundColor: "#f2f" /*FIXME*/,
               borderRadius: 12,
               marginTop: 3,
             },
