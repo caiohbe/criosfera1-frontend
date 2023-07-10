@@ -6,6 +6,12 @@ const homeSx = {
     },
     boxLeft: {
       sx: { height: "80vh", width: "50%", textAlign: "center" },
+      typographyH3: {
+        sx: { marginTop: 1 },
+      },
+      typographyH2: {
+        sx: { marginTop: 1, marginBottom: 4, fontSize: 45 },
+      },
     },
     boxRight: { sx: {} },
     criosferaGif: {

@@ -5,19 +5,15 @@ import { homeSx } from "./homeStyles"
 
 function Home() {
   const navigate = useNavigate()
-
   return (
     <Container disableGutters={true} sx={homeSx.Container.sx}>
       <Box sx={homeSx.Container.boxLeft.sx}>
-        <Typography variant='h3' sx={{ marginTop: 1 }}>
+        <Typography variant='h3' sx={homeSx.Container.boxLeft.typographyH3.sx}>
           CRIOSFERA 1
         </Typography>
-        <Typography
-          variant='h2'
-          sx={{ marginTop: 1, marginBottom: 4, fontSize: 45 }}
-        >
-          o primeiro módulo científico brasileiro instalado no interior <br />
-          da Antártida
+        <Typography variant='h2' sx={homeSx.Container.boxLeft.typographyH2.sx}>
+          o primeiro módulo científico brasileiro instalado no interior da
+          Antártida
         </Typography>
         <Button
           onClick={() => {
