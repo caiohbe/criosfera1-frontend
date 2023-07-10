@@ -1,17 +1,16 @@
 import { createTheme } from "@mui/material"
-import {} from "@mui/material/colors"
 
 let criosferaTheme = createTheme({
   palette: {
     primary: {
-      main: "#7D8DBE",
+      main: "#3598FE",
     },
     secondary: {
       main: "#FFF ",
     },
   },
   typography: {
-    fontFamily: ["Lato", "sans-serif"].join(","),
+    fontFamily: "Lato, sans-serif",
   },
 })
 
